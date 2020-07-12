@@ -1,24 +1,18 @@
-package com.spring.codeblog.model;
-
-import java.time.LocalDate;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Lob;
-import javax.persistence.Table;
-import javax.validation.constraints.NotBlank;
+package com.spring.blog.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import java.time.LocalDate;
+
 @Entity
-@Table(name = "TB_POST")
+@Table(name="TB_POST")
 public class Post {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    @GeneratedValue(strategy= GenerationType.AUTO)
+    private Long id;
 
     @NotBlank
     private String titulo;
@@ -26,23 +20,23 @@ public class Post {
     @NotBlank
     private String autor;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
+    @JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "dd-MM-yyyy")
     private LocalDate data;
 
     @NotBlank
     @Lob
     private String texto;
 
-    public long getId() {
-        return this.id;
+    public Long getId() {
+        return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
     public String getTitulo() {
-        return this.titulo;
+        return titulo;
     }
 
     public void setTitulo(String titulo) {
@@ -50,7 +44,7 @@ public class Post {
     }
 
     public String getAutor() {
-        return this.autor;
+        return autor;
     }
 
     public void setAutor(String autor) {
@@ -58,7 +52,7 @@ public class Post {
     }
 
     public LocalDate getData() {
-        return this.data;
+        return data;
     }
 
     public void setData(LocalDate data) {
@@ -66,11 +60,10 @@ public class Post {
     }
 
     public String getTexto() {
-        return this.texto;
+        return texto;
     }
 
     public void setTexto(String texto) {
         this.texto = texto;
     }
-
 }
