@@ -24,12 +24,6 @@ Este projeto foi criado a partir de ensinamentos de Michelli Brito na série de 
   <li>PostgreSQL</li> 
 </ul>
 
----
-<h1 align="center">
-    <img src="https://im.ezgif.com/tmp/ezgif-1-570046cb935b.gif" width="400">
-    <img src="https://im.ezgif.com/tmp/ezgif-1-570046cb935b.gif" width="400">
-</h1>
-
 ## :computer: Rodando o projeto:
 
 1 - Faça um `git clone` do repositório.
